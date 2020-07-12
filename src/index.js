@@ -2,9 +2,17 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
+// styles from this kit
+import "./assets/css/bootstrap.min.css";
+import "./assets/css/now-ui-kit.css";
+import "./assets/demo/demo.css";
+import "./assets/demo/nucleo-icons-page-styles.css";
+
+// additional styles
 import "./index.css";
-import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+
+// pages
 import Index from "./views/Index";
 
 ReactDOM.render(
