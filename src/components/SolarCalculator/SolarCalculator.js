@@ -1,5 +1,6 @@
 import React from "react";
 
+import "./SolarCalculator.css";
 // reactstrap components
 import {
   Button,
@@ -24,18 +25,10 @@ function SolarCalculator() {
   const [emailFocus, setEmailFocus] = React.useState(false);
   return (
     <>
-      <div
-        className="section section-signup"
-        style={{
-          backgroundImage: "url(" + require("assets/img/bg11.jpg") + ")",
-          backgroundSize: "cover",
-          backgroundPosition: "top center",
-          minHeight: "700px",
-        }}
-      >
+      <div className="section section-calculator">
         <Container>
           <Row>
-            <Card className="card-signup" data-background-color="blue">
+            <Card className="card-calculator" data-background-color="blue">
               <Form action="" className="form" method="">
                 <CardHeader className="text-center">
                   <CardTitle className="title-up" tag="h3">
@@ -52,7 +45,7 @@ function SolarCalculator() {
                       >
                         <InputGroupAddon addonType="prepend">
                           <InputGroupText>
-                            <i className="now-ui-icons users_circle-08"></i>
+                            <i className="fas fa-plug"></i>
                           </InputGroupText>
                         </InputGroupAddon>
                         <Input
@@ -72,7 +65,7 @@ function SolarCalculator() {
                       >
                         <InputGroupAddon addonType="prepend">
                           <InputGroupText>
-                            <i className="now-ui-icons text_caps-small"></i>
+                            <i className="fas fa-bolt"></i>
                           </InputGroupText>
                         </InputGroupAddon>
                         <Input
@@ -91,7 +84,7 @@ function SolarCalculator() {
                       >
                         <InputGroupAddon addonType="prepend">
                           <InputGroupText>
-                            <i className="now-ui-icons ui-1_email-85"></i>
+                            <i className="far fa-clock"></i>
                           </InputGroupText>
                         </InputGroupAddon>
                         <Input

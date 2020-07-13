@@ -1,0 +1,36 @@
+.section {
+  padding: 30px 0;
+}
+
+.section-calculator {
+  background-image: url("../../assets/img/bg11.jpg");
+  background-size: cover;
+  background-position: top center;
+  min-height: 700px;
+}
+
+.card-calculator {
+  max-width: auto;
+  margin: 0 auto;
+}
+
+.card-calculator .card-header {
+  margin: 0 20px;
+  padding: 30px 0;
+}
+
+.card-calculator .card-title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.card-calculator .card-body {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.card-calculator .card-footer {
+  margin-bottom: 10px;
+  margin-top: 24px;
+  padding: 24px 0;
+}
