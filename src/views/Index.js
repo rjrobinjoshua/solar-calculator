@@ -3,7 +3,6 @@ import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import IndexHeader from "components/Headers/IndexHeader.js";
 import Footer from "components/Footers/Footer.js";
 import SolarCalculator from "components/SolarCalculator/SolarCalculator.js";
-
 // reactstrap components
 import { Container, Row, Col } from "reactstrap";
 
