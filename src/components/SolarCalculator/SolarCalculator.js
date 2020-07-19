@@ -20,9 +20,10 @@ import {
 } from "reactstrap";
 
 function SolarCalculator() {
-  const [firstFocus, setFirstFocus] = React.useState(false);
-  const [lastFocus, setLastFocus] = React.useState(false);
-  const [emailFocus, setEmailFocus] = React.useState(false);
+  const [deviceFocus, setDeviceFocus] = React.useState(false);
+  const [powerFocus, setPowerFocus] = React.useState(false);
+  const [usageFocus, setUsageFocus] = React.useState(false);
+
   return (
     <>
       <div className="section section-calculator">
@@ -40,7 +41,8 @@ function SolarCalculator() {
                     <Col>
                       <InputGroup
                         className={
-                          "no-border" + (firstFocus ? " input-group-focus" : "")
+                          "no-border input-lg" +
+                          (deviceFocus ? " input-group-focus" : "")
                         }
                       >
                         <InputGroupAddon addonType="prepend">
@@ -49,18 +51,28 @@ function SolarCalculator() {
                           </InputGroupText>
                         </InputGroupAddon>
                         <Input
-                          placeholder="First Name..."
                           type="text"
-                          onFocus={() => setFirstFocus(true)}
-                          onBlur={() => setFirstFocus(false)}
+                          onFocus={() => setDeviceFocus(true)}
+                          onBlur={(e) =>
+                            !e.target.value ? setDeviceFocus(false) : ""
+                          }
                         ></Input>
+                        <span
+                          className={
+                            deviceFocus
+                              ? "floating-label-focus"
+                              : "floating-label"
+                          }
+                        >
+                          Device
+                        </span>
                       </InputGroup>
                     </Col>
                     <Col>
                       <InputGroup
                         className={
                           "no-border input-lg" +
-                          (lastFocus ? " input-group-focus" : "")
+                          (powerFocus ? " input-group-focus " : "")
                         }
                       >
                         <InputGroupAddon addonType="prepend">
@@ -69,17 +81,28 @@ function SolarCalculator() {
                           </InputGroupText>
                         </InputGroupAddon>
                         <Input
-                          placeholder="Last Name..."
                           type="text"
-                          onFocus={() => setLastFocus(true)}
-                          onBlur={() => setLastFocus(false)}
+                          onFocus={() => setPowerFocus(true)}
+                          onBlur={(e) =>
+                            !e.target.value ? setPowerFocus(false) : ""
+                          }
                         ></Input>
+                        <span
+                          className={
+                            powerFocus
+                              ? "floating-label-focus"
+                              : "floating-label"
+                          }
+                        >
+                          Power (watts)
+                        </span>
                       </InputGroup>
                     </Col>
                     <Col>
                       <InputGroup
                         className={
-                          "no-border" + (emailFocus ? " input-group-focus" : "")
+                          "no-border input-lg" +
+                          (usageFocus ? " input-group-focus" : "")
                         }
                       >
                         <InputGroupAddon addonType="prepend">
@@ -88,11 +111,21 @@ function SolarCalculator() {
                           </InputGroupText>
                         </InputGroupAddon>
                         <Input
-                          placeholder="Email..."
                           type="text"
-                          onFocus={() => setEmailFocus(true)}
-                          onBlur={() => setEmailFocus(false)}
+                          onFocus={() => setUsageFocus(true)}
+                          onBlur={(e) =>
+                            !e.target.value ? setUsageFocus(false) : ""
+                          }
                         ></Input>
+                        <span
+                          className={
+                            usageFocus
+                              ? "floating-label-focus"
+                              : "floating-label"
+                          }
+                        >
+                          Usage (Hours per day)
+                        </span>
                       </InputGroup>
                     </Col>
                   </Row>
