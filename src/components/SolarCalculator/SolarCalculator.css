@@ -1,18 +1,13 @@
+#root {
+  min-width: 350px;
+}
+
 .section {
   padding: 30px 0;
 }
 
 .row {
   margin-bottom: 20px;
-}
-
-@media (max-width: 576px) {
-  .container {
-    width: 80%;
-  }
-  .card-body .row {
-    display: block;
-  }
 }
 
 .section-calculator {
@@ -25,6 +20,10 @@
 .card-calculator {
   max-width: auto;
   margin: 0 auto;
+}
+
+.calculator-value {
+  min-width: max-content;
 }
 
 .card-calculator .card-header {
@@ -40,6 +39,10 @@
 .card-calculator .card-body {
   padding-top: 0px;
   padding-bottom: 15px;
+}
+
+.card-deck .card {
+  margin-bottom: 15px;
 }
 
 .card-calculator .card-footer {
@@ -72,8 +75,21 @@
   font-weight: bold;
 }
 
+@media (max-width: 576px) {
+  .container {
+    width: 80%;
+  }
+  .card-body .row {
+    display: block;
+  }
+  .calculator-value {
+    min-width: fit-content;
+  }
+}
+
 .card-result {
   border-radius: 10px;
+  min-width: fit-content;
 }
 
 .result-card {
@@ -95,4 +111,8 @@
   margin-top: 0.25rem;
   font-size: 1.3rem;
   color: rgba(255, 255, 255, 0.8);
+}
+
+.text-none {
+  text-transform: none;
 }

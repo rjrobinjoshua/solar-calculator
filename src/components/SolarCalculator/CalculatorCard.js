@@ -18,10 +18,12 @@ import {
   Col,
 } from "reactstrap";
 
-function CalculatorCard() {
+function CalculatorCard({ onButtonSubmit }) {
   const [deviceFocus, setDeviceFocus] = React.useState(false);
   const [powerFocus, setPowerFocus] = React.useState(false);
   const [usageFocus, setUsageFocus] = React.useState(false);
+  const [power, setPower] = React.useState(0);
+  const [usage, setUsage] = React.useState(0);
 
   return (
     <>
@@ -37,7 +39,7 @@ function CalculatorCard() {
               <Col>
                 <InputGroup
                   className={
-                    "no-border input-lg" +
+                    "no-border input-lg calculator-value" +
                     (deviceFocus ? " input-group-focus" : "")
                   }
                 >
@@ -65,7 +67,7 @@ function CalculatorCard() {
               <Col>
                 <InputGroup
                   className={
-                    "no-border input-lg" +
+                    "no-border input-lg calculator-value" +
                     (powerFocus ? " input-group-focus " : "")
                   }
                 >
@@ -80,6 +82,7 @@ function CalculatorCard() {
                     onBlur={(e) =>
                       !e.target.value ? setPowerFocus(false) : ""
                     }
+                    onChange={(e) => setPower(e.target.value)}
                   ></Input>
                   <span
                     className={
@@ -93,7 +96,7 @@ function CalculatorCard() {
               <Col>
                 <InputGroup
                   className={
-                    "no-border input-lg" +
+                    "no-border input-lg calculator-value" +
                     (usageFocus ? " input-group-focus" : "")
                   }
                 >
@@ -108,6 +111,7 @@ function CalculatorCard() {
                     onBlur={(e) =>
                       !e.target.value ? setUsageFocus(false) : ""
                     }
+                    onChange={(e) => setUsage(e.target.value)}
                   ></Input>
                   <span
                     className={
@@ -124,8 +128,10 @@ function CalculatorCard() {
             <Button
               className="btn-neutral btn-round"
               color="info"
-              href="#pablo"
-              onClick={(e) => e.preventDefault()}
+              onClick={(e) => {
+                e.preventDefault();
+                onButtonSubmit(power, usage);
+              }}
               size="lg"
             >
               Calculate

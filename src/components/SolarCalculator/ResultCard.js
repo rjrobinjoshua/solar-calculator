@@ -2,24 +2,16 @@ import React from "react";
 
 import "./SolarCalculator.css";
 // reactstrap components
-import {
-  Button,
-  Card,
-  CardDeck,
-  CardBody,
-  CardImg,
-  CardTitle,
-  CardSubtitle,
-  CardText,
-  CardHeader,
-  CardImgOverlay,
-} from "reactstrap";
+import { Card, CardDeck, CardBody, CardTitle, CardHeader } from "reactstrap";
 
-function ResultCard() {
-  const [deviceFocus, setDeviceFocus] = React.useState(false);
-  const [powerFocus, setPowerFocus] = React.useState(false);
-  const [usageFocus, setUsageFocus] = React.useState(false);
-
+function ResultCard({
+  totalLoad,
+  totalEnergy,
+  solarPower,
+  solarPanels,
+  inverter,
+  battery,
+}) {
   return (
     <>
       <Card className="card-calculator" data-background-color="blue">
@@ -36,7 +28,10 @@ function ResultCard() {
                   <span className="fas fa-charging-station"></span>
                   <div className="ml-4">
                     <small className="result-title">Total Load</small>
-                    <h6 className="result-value">3050</h6>
+                    <h6 className="result-value">
+                      {totalLoad}
+                      <small className="text-none"> Watts</small>
+                    </h6>
                   </div>
                 </div>
               </h2>
@@ -47,7 +42,10 @@ function ResultCard() {
                   <span className="fas fa-bolt"></span>
                   <div className="ml-4">
                     <small className="result-title">Total Energy</small>
-                    <h6 className="result-value">3050</h6>
+                    <h6 className="result-value">
+                      {totalEnergy}
+                      <small className="text-none"> Watt hour</small>
+                    </h6>
                   </div>
                 </div>
               </h2>
@@ -58,7 +56,10 @@ function ResultCard() {
                   <span className="fas fa-sun"></span>
                   <div className="ml-4">
                     <small className="result-title">Solar Power</small>
-                    <h6 className="result-value">3050</h6>
+                    <h6 className="result-value">
+                      {solarPower}
+                      <small className="text-none"> Watt peak</small>
+                    </h6>
                   </div>
                 </div>
               </h2>
@@ -71,7 +72,12 @@ function ResultCard() {
                   <span className="fas fa-solar-panel"></span>
                   <div className="ml-4">
                     <small className="result-title">Solar Panels</small>
-                    <h6 className="result-value">3050</h6>
+                    <h6 className="result-value">
+                      {solarPanels}
+                      <small className="text-none"> Wp Panel x </small>
+                      {solarPanels}
+                      <small className="text-none"> nos</small>
+                    </h6>
                   </div>
                 </div>
               </h2>
@@ -81,8 +87,11 @@ function ResultCard() {
                 <div className="result-container">
                   <span className="far fa-hdd"></span>
                   <div className="ml-4">
-                    <small className="result-title">Inverter</small>
-                    <h6 className="result-value">3050</h6>
+                    <small className="result-title">Inverter Capacity</small>
+                    <h6 className="result-value">
+                      {inverter}
+                      <small className="text-none"> Watts</small>
+                    </h6>
                   </div>
                 </div>
               </h2>
@@ -92,8 +101,11 @@ function ResultCard() {
                 <div className="result-container">
                   <span className="fas fa-car-battery"></span>
                   <div className="ml-4">
-                    <small className="result-title">Battery</small>
-                    <h6 className="result-value">3050</h6>
+                    <small className="result-title">Battery Capacity</small>
+                    <h6 className="result-value">
+                      {battery}
+                      <small className="text-none"> Ampere hour</small>
+                    </h6>
                   </div>
                 </div>
               </h2>
