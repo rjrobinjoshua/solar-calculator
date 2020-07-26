@@ -30,115 +30,73 @@ function ResultCard() {
         </CardHeader>
         <CardBody>
           <CardDeck>
-            <Card data-background-color="blue">
-              <CardImg
-                width="100%"
-                src={require("assets/img/300x240.svg")}
-                alt="Total Load image"
-              />
-              <CardImgOverlay>
-                <CardTitle>Total Load</CardTitle>
-                <CardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </CardText>
-                <CardText>
-                  <small className="text-muted">Last updated 3 mins ago</small>
-                </CardText>
-              </CardImgOverlay>
+            <Card className="card-result" data-background-color="blue">
+              <h2 className="result-card">
+                <div className="result-container">
+                  <span className="fas fa-charging-station"></span>
+                  <div className="ml-4">
+                    <small className="result-title">Total Load</small>
+                    <h6 className="result-value">3050</h6>
+                  </div>
+                </div>
+              </h2>
             </Card>
-            <Card data-background-color="blue">
-              <CardImg
-                width="100%"
-                src={require("assets/img/300x240.svg")}
-                alt="Total Energy image"
-              />
-              <CardImgOverlay>
-                <CardTitle>Total Energy</CardTitle>
-                <CardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </CardText>
-                <CardText>
-                  <small className="text-muted">Last updated 3 mins ago</small>
-                </CardText>
-              </CardImgOverlay>
+            <Card className="card-result" data-background-color="blue">
+              <h2 className="result-card">
+                <div className="result-container">
+                  <span className="fas fa-bolt"></span>
+                  <div className="ml-4">
+                    <small className="result-title">Total Energy</small>
+                    <h6 className="result-value">3050</h6>
+                  </div>
+                </div>
+              </h2>
             </Card>
-            <Card data-background-color="blue">
-              <CardImg
-                width="100%"
-                src={require("assets/img/300x240.svg")}
-                alt="Solar power image"
-              />
-              <CardImgOverlay>
-                <CardTitle>Solar Power</CardTitle>
-                <CardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </CardText>
-                <CardText>
-                  <small className="text-muted">Last updated 3 mins ago</small>
-                </CardText>
-              </CardImgOverlay>
+            <Card className="card-result" data-background-color="blue">
+              <h2 className="result-card">
+                <div className="result-container">
+                  <span className="fas fa-sun"></span>
+                  <div className="ml-4">
+                    <small className="result-title">Solar Power</small>
+                    <h6 className="result-value">3050</h6>
+                  </div>
+                </div>
+              </h2>
             </Card>
           </CardDeck>
           <CardDeck>
-            <Card data-background-color="blue">
-              <CardImg
-                width="100%"
-                src={require("assets/img/300x240.svg")}
-                alt="Solar panel image"
-              />
-              <CardImgOverlay>
-                <CardTitle>Solar Panels</CardTitle>
-                <CardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </CardText>
-                <CardText>
-                  <small className="text-muted">Last updated 3 mins ago</small>
-                </CardText>
-              </CardImgOverlay>
+            <Card className="card-result" data-background-color="blue">
+              <h2 className="result-card">
+                <div className="result-container">
+                  <span className="fas fa-solar-panel"></span>
+                  <div className="ml-4">
+                    <small className="result-title">Solar Panels</small>
+                    <h6 className="result-value">3050</h6>
+                  </div>
+                </div>
+              </h2>
             </Card>
-            <Card data-background-color="blue">
-              <CardImg
-                width="100%"
-                src={require("assets/img/300x240.svg")}
-                alt="Inverter image"
-              />
-              <CardImgOverlay>
-                <CardTitle>Inverter</CardTitle>
-                <CardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </CardText>
-                <CardText>
-                  <small className="text-muted">Last updated 3 mins ago</small>
-                </CardText>
-              </CardImgOverlay>
+            <Card className="card-result" data-background-color="blue">
+              <h2 className="result-card">
+                <div className="result-container">
+                  <span className="far fa-hdd"></span>
+                  <div className="ml-4">
+                    <small className="result-title">Inverter</small>
+                    <h6 className="result-value">3050</h6>
+                  </div>
+                </div>
+              </h2>
             </Card>
-            <Card data-background-color="blue">
-              <CardImg
-                width="100%"
-                src={require("assets/img/300x240.svg")}
-                alt="Battery image"
-              />
-              <CardImgOverlay>
-                <CardTitle>Battery</CardTitle>
-                <CardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </CardText>
-                <CardText>
-                  <small className="text-muted">Last updated 3 mins ago</small>
-                </CardText>
-              </CardImgOverlay>
+            <Card className="card-result" data-background-color="blue">
+              <h2 className="result-card">
+                <div className="result-container">
+                  <span className="fas fa-car-battery"></span>
+                  <div className="ml-4">
+                    <small className="result-title">Battery</small>
+                    <h6 className="result-value">3050</h6>
+                  </div>
+                </div>
+              </h2>
             </Card>
           </CardDeck>
         </CardBody>

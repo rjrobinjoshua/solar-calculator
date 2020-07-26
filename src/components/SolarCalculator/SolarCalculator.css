@@ -6,6 +6,15 @@
   margin-bottom: 20px;
 }
 
+@media (max-width: 576px) {
+  .container {
+    width: 80%;
+  }
+  .card-body .row {
+    display: block;
+  }
+}
+
 .section-calculator {
   background-image: url("../../assets/img/bg11.jpg");
   background-size: cover;
@@ -30,7 +39,7 @@
 
 .card-calculator .card-body {
   padding-top: 0px;
-  padding-bottom: 0px;
+  padding-bottom: 15px;
 }
 
 .card-calculator .card-footer {
@@ -63,6 +72,27 @@
   font-weight: bold;
 }
 
-.card-deck {
-  margin-bottom: 30px;
+.card-result {
+  border-radius: 10px;
+}
+
+.result-card {
+  padding: 1.5rem;
+  margin-bottom: 0 !important;
+}
+
+.result-container {
+  display: flex;
+  align-items: center;
+}
+
+.result-title {
+  color: #142b40;
+}
+
+.result-value {
+  margin: 0;
+  margin-top: 0.25rem;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.8);
 }
